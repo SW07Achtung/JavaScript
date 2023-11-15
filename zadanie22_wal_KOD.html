@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="500" rows="700">
+        <html>
+            <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="styl.css">
+            </head>
+            <body>
+            <script type="text/javascript">
+            function pole_wal()
+            {
+            var a_wal= parseFloat(document.getElementById('dlugosca').value);
+            var b_wal= parseFloat(document.getElementById('dlugoscb').value);
+            var p_wal= a_wal*b_wal;
+            document.getElementsByName('pole')[0].value=p_wal.toFixed(2);
+            alert("Pole="+p_wal.toFixed(2)+" cm^2");
+            pokaz1.innerHTML="Pole="+p_wal.toFixed(2)+"cm^2";
+            }
+            function obw_wal()
+            {
+            var a_wal= parseFloat(document.getElementById('dlugosca').value);
+            var b_wal= parseFloat(document.getElementById('dlugoscb').value);
+            var obw_wal= 2*a_wal+2*b_wal;
+            document.getElementsByName('obwod')[0].value=obw_wal.toFixed(2);
+            alert("Obwód="+obw_wal.toFixed(2)+" cm");
+            pokaz2.innerHTML="Obwód="+obw_wal.toFixed(2)+"cm";
+            }
+            </script>
+            <h1>Wszystko o prostokącie</h1><br><br>
+            <form name="formularz" action="..." onsubmit="pole_wal(this.a.value,this.b.value);
+             obw_wal(this.a.value,this.b.value);
+             return false"></form>
+            Podaj długość boku a: <input type="text" id="dlugosca" value="a"> cm<br><br><br>
+            Podaj długość boku b: <input type="text" id="dlugoscb" value="b"> cm<br><br><br>
+            <input type="button" name="pole" value="Oblicz pole" Onclick="pole_wal()"><br><br>
+            <input type="button" name="obwod" value="Oblicz obwod" Onclick="obw_wal()"><br><br>
+            </form>
+            <table>
+                <tr id="pokaz1"></tr>
+                <tr id="pokaz2"></tr>
+                </table>
+            </body>
+            </html>
+    </textarea>
+</body>
+</html>

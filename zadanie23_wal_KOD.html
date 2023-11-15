@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="500" rows="700">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <Script>
+                function drabina_wal(d,x){
+                    d_wal=parseFloat(getElementById('wysokosc').value);
+                    x_wal=parseFloat(getElementById('odleglosc').value);
+                    dlug1_wal=d_wal*d_wal+x_wal*x_wal;
+                    dlug_wal=Math.sqrt(dlug1_wal);
+                    document.getElementsByName('dlugosc')[0].value=dlug_wal.toFixed(2);
+                }
+                function kat_wal(d,x){
+                    d_wal=parseFloat(getElementById('wysokosc').value);
+                    x_wal=parseFloat(getElementById('odleglosc').value);
+                    tg=d_wal/x_wal;
+                    rad=Math.atan(tg);
+                    deg=(rad*180)/Math.PI;
+                    document.getElementsByName('kat_a')[0].value=deg.toFixed(2);
+                }</script>
+        </head>
+        <body>
+            <h1>Długość drabiny i kąt nachylenia</h1>
+            <form name="formularz" action="..." onsubmit="drabina_wal(this.wysokosc.value,this.odleglosc.value); kat_wal(this.wysokosc.value,this.odleglosc.value);
+            return false";>
+            Podaj wysokosc d =<br><br><input size="6" id="wysokosc"><br><br>
+            Podaj odleglosc x =<br><br><input size="6" id="odleglosc"><br><br>
+            <input TYPE="submit" Value="Oblicz">
+            <br><br>
+            Długość drabiny=<input size="6" name="dlugosc">m
+            <br><br>
+            Kąt Alfa=<input size="6" name="kat_a"></form>
+        </body>
+        </html>
+    </textarea>
+</body>
+</html>

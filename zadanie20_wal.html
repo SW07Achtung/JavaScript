@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function AB_wal(){
+                var xa_wal= parseFloat(document.getElementById('xa').value);
+                var xb_wal= parseFloat(document.getElementById('xb').value);
+                var ya_wal= parseFloat(document.getElementById('ya').value);
+                var yb_wal= parseFloat(document.getElementById('yb').value);
+                var pot1 = Math.pow(xa_wal-xb_wal,2);
+                var pot2 = Math.pow(ya_wal-yb_wal,2);
+                var h = pot1+pot2;
+                var odc = Math.sqrt(h);
+                document.getElementById("nazwa").innerHTML ="Odcinek AB= "+odc;
+            }
+            function BC_wal(){
+                var xb_wal= parseFloat(document.getElementById('xb').value);
+                var xc_wal= parseFloat(document.getElementById('xc').value);
+                var yb_wal= parseFloat(document.getElementById('yb').value);
+                var yc_wal= parseFloat(document.getElementById('yc').value);
+                var pot1 = Math.pow(xb_wal-xc_wal,2);
+                var pot2 = Math.pow(yb_wal-yc_wal,2);
+                var h = pot1+pot2;
+                var odc = Math.sqrt(h);
+                document.getElementById("nazwa").innerHTML ="Odcinek BC= "+odc;
+            }
+            function AC_wal(){
+                var xa_wal= parseFloat(document.getElementById('xa').value);
+                var xc_wal= parseFloat(document.getElementById('xc').value);
+                var ya_wal= parseFloat(document.getElementById('ya').value);
+                var yc_wal= parseFloat(document.getElementById('yc').value);
+                var pot1 = Math.pow(xa_wal-xc_wal,2);
+                var pot2 = Math.pow(ya_wal-yc_wal,2);
+                var h = pot1+pot2;
+                var odc = Math.sqrt(h);
+                document.getElementById("nazwa").innerHTML ="Odcinek AC= "+odc;
+                
+            }
+    </script>
+Podaj x punktu A: <input type="text" id="xa" value=""><br><br><br>
+Podaj y punktu A: <input type="text" id="ya" value=""><br><br><br>
+Podaj x punktu B: <input type="text" id="xb" value=""><br><br><br>
+Podaj y punktu B: <input type="text" id="yb" value=""><br><br><br>
+Podaj x punktu C: <input type="text" id="xc" value=""><br><br><br>
+Podaj y punktu C: <input type="text" id="yc" value=""><br><br><br>
+<input type="button" name="AB" value="Oblicz odcinek AB" Onclick="AB_wal()"><br><br>
+<input type="button" name="AC" value="Oblicz odcinek AC" Onclick="BC_wal()"><br><br>
+<input type="button" name="BC" value="Oblicz odcinek BC" Onclick="AC_wal()"><br><br>
+<div style="color:red;font-size:50px;"id="nazwa"></div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="500" rows="700">
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Zadanie 24</title>
+        
+            <style>
+              body {
+                background-color: gray;
+                color: blue;
+                font-size: 30px;
+              }
+            </style>
+        
+            <script language="JavaScript">
+              var a_wal = parseFloat(prompt("x1=", ""));
+              var b_wal = parseFloat(prompt("x2=", ""));
+              var y1_wynik = 0;
+              var y2_wynik = 0;
+              var y3_wynik = 0;
+              x_rad = (a_wal * Math.PI) / 180;
+        
+            
+              y1_wynik = 3*Math.pow(a_wal, 5/7);
+              
+              y2_wynik = 2 *Math.cos(x_rad) + 3 * Math.sin(x_rad);
+        
+              y3_wynik = Math.cbrt(Math.pow(a_wal,5) + 2 * Math.pow(b_wal,4)) * Math.abs(a_wal-b_wal);
+        
+              document.write("x1 = " + a_wal + "&nbsp&nbsp&nbsp&nbsp&nbspx2 = " + b_wal + "<br>");
+        
+              document.write("x1 = " +a_wal +"&nbsp&nbsp&nbsp&nbsp&nbspx2 = " +x_rad.toFixed(2) +"<br>");
+        
+              document.write("y1 = " +y1_wynik.toFixed(2)+"<br>");
+        
+              document.write("y2 = " +y2_wynik.toFixed(2)+"<br>");
+        
+              document.write("y3 = " +y3_wynik.toFixed(2)+"<br>");
+            </script>
+          </head>
+          <body></body>
+        </html>
+    </textarea>
+</body>
+</html>

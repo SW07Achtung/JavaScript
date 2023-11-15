@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea cols="500" rows="700">
+        <html>
+            <head>
+            <meta charset="UTF-8">
+            <link rel="stylesheet" href="styl.css">
+            </head>
+            <body>
+            <script type="text/javascript">
+            function pole_waleka()
+            {
+            var a_wal= parseFloat(document.getElementById('dlugosc').value);
+            var b_wal= a_wal*a_wal;
+            document.getElementById("nazwa").innerHTML ="Pole kwadratu= "+b_wal.toFixed(2)+" cm^2";
+            }
+            function obwod_waleka()
+            {
+            var a_wal= parseFloat(document.getElementById('dlugosc').value);
+            var b_wal= 4*a_wal;
+            document.getElementById("nazwa").innerHTML ="Obwód kwadratu= "+b_wal.toFixed(2)+" cm";
+            }
+            </script>
+            <h1>Wszystko o KWADRACIE</h1><br><br>
+            Podaj długość boku: <input type="text" id="dlugosc" value="podaj długość"> cm<br><br><br>
+            <input type="button" name="pole" value="Oblicz pole" Onclick="pole_waleka()"><br><br>
+            <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_waleka()"><br><br>
+            <div style="color:red;font-size:50px;"id="nazwa"></div>
+            </body>
+            </html>
+    </textarea>
+</body>
+</html>
