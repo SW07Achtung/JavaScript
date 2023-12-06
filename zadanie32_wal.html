@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function wiezowiec(wysokosc_w,kondygnacje_w,miasto_w){
+            this.wysokosc=wysokosc_w;
+            this.kondygnacje=kondygnacje_w;
+            this.miasto=miasto_w;
+        }
+        wiezowiec.prototype.wypisz=function(){
+            alert(this.wysokosc+" "+this.kondygnacje+" "+this.miasto);
+        }
+        var WTC = new wiezowiec("526m",110,"Nowy Jork");
+        var Empire_State_Building= new wiezowiec("443m",102,"Nowy Jork");
+        var Olivia_Star = new wiezowiec("180", 35, "Gdańsk");
+        WTC.wypisz();
+        Empire_State_Building.wypisz();
+        Olivia_Star.wypisz();
+        document.write("Dostęp do właściwości<br>");
+        document.write("WTC "+WTC.wysokosc+" "+WTC.kondygnacje+" "+WTC.miasto+"<br>");
+        document.write("Empire State Buliding "+Empire_State_Building.wysokosc+" "+Empire_State_Building.kondygnacje+" "+Empire_State_Building.miasto+"<br>");
+        document.write("Olivia Star "+Olivia_Star.wysokosc+" "+Olivia_Star.kondygnacje+" "+Olivia_Star.miasto+"<br>");
+
+
+    </script>
+</body>
+</html>
